@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Architect's Calculator</title>
+        <meta http-equiv="Content-Type" content="text/html;">
+        <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">        
+        <style>
+
+         .orange {
+             color: #0e50b2;
+         }
+
+         .b--orange {
+             border-color: #0e50b2;
+         }
+
+         .green {
+             color: #3a5840;
+         }
+
+         .b--green {
+             border-color: #3a5840;
+         }
+
+         .gold {
+             color: #dd5b1c;
+         }
+
+         .b--gold {
+             border-color: #dd5b1c;
+         }         
+
+         .shadow-1 {
+             box-shadow: 0px 0px 18px 4px rgba(0,0,0,.1);
+         }
+
+         * {
+             font-family: 'Raleway', sans-serif;
+             -webkit-font-smoothing: antialiased;
+         }
+
+         table {
+             border-bottom: 2px solid!important;
+         }
+
+         table, th, td {
+             padding: 4px;
+             border-right: 1px solid;
+             border-collapse: collapse;
+         }
+
+        </style>
+    </head>
+
+      <body class="bg-near-white">
+
+        <div class="mw9 center tc">
+
+           
+            <h1 class="purple f2 mt4">The Architect's Calculator</h1>
+
+            <div class="flex justify-center">
+                <div class="flexflex-column">
+                    <div class="orange f4 ma2">Costs table</div>
+                    <article style="width: 500px;" class="br2 bg-white orange ba dark-gray b--orange bw1 mb4 shadow-1 flex center">
+                        <div class="w-100 bg-white">
+                            
+                            <table class="ba br2 b--orange w-100">
+                                <tbody>
+                                    <tr>
+                                        <th class="pr3">
+                                        </th>
+                                        <th>Level 1</th> 
+                                        <th>Level 2</th> 
+                                        <th>Level 3</th> 
+                                        <th>Level 4</th> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="">Rooms</th>
+                                        <td>$15,000</td> 
+                                        <td>$25,000</td> 
+                                        <td>$35,000</td> 
+                                        <td>$45,000</td> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="pr3">Walls and rooftops</th>
+                                        <td>$3,000</td>
+                                        <td>$3,000</td>
+                                        <td>$3,000</td>
+                                        <td>$5,000</td>                                   
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>                    
+                    <div class="orange f4 ma2">Design table</div>
+                    <article style="width: 500px;" class="br2 bg-white orange ba dark-gray b--orange bw1 mb4 shadow-1 flex center">
+                        <div class="w-100 bg-white">
+                            
+                            <table class="ba br2 b--orange w-100">
+                                <tbody>
+                                    <tr>
+                                        <th class="pr3">
+                                        </th>
+                                        <th>Level 1</th> 
+                                        <th>Level 2</th> 
+                                        <th>Level 3</th> 
+                                        <th>Level 4</th> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="">Rooms</th>
+                                        <td><input id="a1" value="2" class="w2 ba b-dotted tc orange integer" type="text"  maxlength="1"></td> 
+                                        <td><input id="a2" value="2" class="w2 ba b-dotted tc orange integer" type="text" maxlength="1" ></td> 
+                                        <td><input id="a3" value="2" class="w2 ba b-dotted tc orange integer" type="text" maxlength="1" ></td> 
+                                        <td><input id="a4" value="2" class="w2 ba b-dotted tc orange integer" type="text" maxlength="1" ></td> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="pr3">Walls and rooftops</th>
+                                        <td><input id="b1" value="6" class="w2 ba b-dotted tc orange integer" type="text" maxlength="2"></td>
+                                        <td><input id="b2" value="6" class="w2 ba b-dotted tc orange integer" type="text" maxlength="2"></td>
+                                        <td><input id="b3" value="6" class="w2 ba b-dotted tc orange integer" type="text" maxlength="2" ></td>
+                                        <td><input id="b4" value="8" class="w2 ba b-dotted tc orange integer" type="text" maxlength="2" ></td>                                   
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>                    
+                    <div class="orange f4 ma2">Total cost table</div>
+                    <article style="width: 500px;" class="br2 bg-white orange ba dark-gray b--orange bw1 mb3 shadow-1 flex center">
+                        <div class="w-100 bg-white">
+                            
+                            <table class="ba br2 b--orange w-100">
+                                <tbody>
+                                    <tr>
+                                        <th class="pr3">
+                                        </th>
+                                        <th>Level 1</th> 
+                                        <th>Level 2</th> 
+                                        <th>Level 3</th> 
+                                        <th>Level 4</th> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="">Rooms</th>
+                                        <td id="c1">-</td> 
+                                        <td id="c2">-</td> 
+                                        <td id="c3">-</td> 
+                                        <td id="c4">-</td> 
+                                        </tr>
+                                        <tr class="tc ba br2">
+                                        <th class="pr3">Walls and rooftops</th>
+                                        <td id="d1">-</td>
+                                        <td id="d2">-</td>
+                                        <td id="d3">-</td>
+                                        <td id="d4">-</td>                                   
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </article>                    
+                    <button class="f4 dim ph3 pv2 ma3 mb4 white bg-purple b--transparent br1 pointer shadow-4" id="button" onclick="calculateAll()">Calculate</button>
+            <div style="width: 500px;" class="ba bw1 b--purple w-50 center bg-white shadow-4">
+                <h1 class="mb0 f3 purple near-black">Total Cost</h1>
+                <h1 class="mt2 f3 pb1 purple near-black" id="totalCost">-</h1>
+            </div>
+                </div>
+            </div>           
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+            calculateAll();
+            function calculateAll(){
+                document.getElementById("c1").innerHTML = "$"+(document.getElementById("a1").value * 15)+",000"
+                document.getElementById("d1").innerHTML = "$"+(document.getElementById("b1").value * 3)+",000"
+                document.getElementById("c2").innerHTML = "$"+(document.getElementById("a2").value * 25)+",000"
+                document.getElementById("d2").innerHTML = "$"+(document.getElementById("b2").value * 3)+",000"
+                document.getElementById("c3").innerHTML = "$"+(document.getElementById("a3").value * 35)+",000"
+                document.getElementById("d3").innerHTML = "$"+(document.getElementById("b3").value * 3)+",000"
+                document.getElementById("c4").innerHTML = "$"+(document.getElementById("a4").value * 45)+",000"
+                document.getElementById("d4").innerHTML = "$"+(document.getElementById("b4").value * 5)+",000"
+
+               totalCostValue = document.getElementById("a1").value * 15 + (document.getElementById("b1").value * 3)+(document.getElementById("a2").value * 25)+(document.getElementById("b2").value * 3)+(document.getElementById("a3").value * 35)+(document.getElementById("b3").value * 3)+(document.getElementById("a4").value * 45)+(document.getElementById("b4").value * 5);
+
+                document.getElementById("totalCost").innerHTML = "$"+totalCostValue+",000";
+
+            }
+
+            // restricts input with class answer to numeric only
+            $('.integer').keypress(validateNumber);
+
+            function validateNumber(event) {
+                var key = window.event ? event.keyCode : event.which;
+                if (event.keyCode === 8) {
+                    return true;
+                } else if ( key < 48 || key > 57 ) {
+                    return false;
+                } else {
+                  return true;
+                }
+            };
+
+              // check answer when you press enter
+              $('.integer').bind('keypress', function(e) {
+                if(e.keyCode==13){
+                    calculateAll();
+                }
+              });
+
+
+            </script>
+
+
+        </div>
+    </body>
+</html>
